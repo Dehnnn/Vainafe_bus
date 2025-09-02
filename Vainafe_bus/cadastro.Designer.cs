@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
             this.Lblnomecompl = new System.Windows.Forms.Label();
             this.LblCPF = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCpf = new System.Windows.Forms.TextBox();
             this.LblTel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbTel = new System.Windows.Forms.TextBox();
             this.Lbldatadenasc = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbDataN = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.txbSenha = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.Lblsenha = new System.Windows.Forms.Label();
             this.Btncadastrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txbNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(324, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Nome e Sobrenome";
+            this.txbNome.Location = new System.Drawing.Point(324, 55);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(204, 20);
+            this.txbNome.TabIndex = 0;
+            this.txbNome.Text = "Nome e Sobrenome";
             // 
             // Lblnomecompl
             // 
@@ -69,13 +69,13 @@
             this.LblCPF.TabIndex = 2;
             this.LblCPF.Text = "CPF";
             // 
-            // textBox2
+            // txbCpf
             // 
-            this.textBox2.Location = new System.Drawing.Point(325, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "***.***.***-**";
+            this.txbCpf.Location = new System.Drawing.Point(325, 103);
+            this.txbCpf.Name = "txbCpf";
+            this.txbCpf.Size = new System.Drawing.Size(203, 20);
+            this.txbCpf.TabIndex = 3;
+            this.txbCpf.Text = "***.***.***-**";
             // 
             // LblTel
             // 
@@ -86,13 +86,13 @@
             this.LblTel.TabIndex = 4;
             this.LblTel.Text = "Telefone";
             // 
-            // textBox3
+            // txbTel
             // 
-            this.textBox3.Location = new System.Drawing.Point(324, 156);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 20);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "(-) ----- - ----";
+            this.txbTel.Location = new System.Drawing.Point(324, 156);
+            this.txbTel.Name = "txbTel";
+            this.txbTel.Size = new System.Drawing.Size(204, 20);
+            this.txbTel.TabIndex = 5;
+            this.txbTel.Text = "(-) ----- - ----";
             // 
             // Lbldatadenasc
             // 
@@ -103,29 +103,29 @@
             this.Lbldatadenasc.TabIndex = 7;
             this.Lbldatadenasc.Text = "Data de Nascimento";
             // 
-            // textBox4
+            // txbDataN
             // 
-            this.textBox4.Location = new System.Drawing.Point(324, 205);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 20);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "DD/MM/AAA";
+            this.txbDataN.Location = new System.Drawing.Point(324, 205);
+            this.txbDataN.Name = "txbDataN";
+            this.txbDataN.Size = new System.Drawing.Size(204, 20);
+            this.txbDataN.TabIndex = 8;
+            this.txbDataN.Text = "DD/MM/AAA";
             // 
-            // textBox5
+            // txbEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(324, 255);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(204, 20);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "Seunome@email.com.br";
+            this.txbEmail.Location = new System.Drawing.Point(324, 255);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(204, 20);
+            this.txbEmail.TabIndex = 9;
+            this.txbEmail.Text = "Seunome@email.com.br";
             // 
-            // textBox6
+            // txbSenha
             // 
-            this.textBox6.Location = new System.Drawing.Point(324, 304);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(204, 20);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.Text = "*****";
+            this.txbSenha.Location = new System.Drawing.Point(324, 304);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.Size = new System.Drawing.Size(204, 20);
+            this.txbSenha.TabIndex = 10;
+            this.txbSenha.Text = "*****";
             // 
             // lblEmail
             // 
@@ -153,6 +153,7 @@
             this.Btncadastrar.TabIndex = 13;
             this.Btncadastrar.Text = "Cadastrar-se";
             this.Btncadastrar.UseVisualStyleBackColor = true;
+            this.Btncadastrar.Click += new System.EventHandler(this.Btncadastrar_Click);
             // 
             // cadastro
             // 
@@ -162,16 +163,16 @@
             this.Controls.Add(this.Btncadastrar);
             this.Controls.Add(this.Lblsenha);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txbSenha);
+            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.txbDataN);
             this.Controls.Add(this.Lbldatadenasc);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbTel);
             this.Controls.Add(this.LblTel);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbCpf);
             this.Controls.Add(this.LblCPF);
             this.Controls.Add(this.Lblnomecompl);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbNome);
             this.Name = "cadastro";
             this.Text = "cadastro";
             this.ResumeLayout(false);
@@ -181,16 +182,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label Lblnomecompl;
         private System.Windows.Forms.Label LblCPF;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCpf;
         private System.Windows.Forms.Label LblTel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbTel;
         private System.Windows.Forms.Label Lbldatadenasc;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbDataN;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label Lblsenha;
         private System.Windows.Forms.Button Btncadastrar;
