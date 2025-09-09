@@ -1,6 +1,6 @@
 ﻿namespace Vainafe_bus
 {
-    partial class Login
+    partial class Login_Tela
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.lblsenha = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnenter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEmail
@@ -68,16 +69,27 @@
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "******";
             // 
-            // Login
+            // btnenter
+            // 
+            this.btnenter.Location = new System.Drawing.Point(361, 232);
+            this.btnenter.Name = "btnenter";
+            this.btnenter.Size = new System.Drawing.Size(145, 26);
+            this.btnenter.TabIndex = 4;
+            this.btnenter.Text = "entrar";
+            this.btnenter.UseVisualStyleBackColor = true;
+            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
+            // 
+            // Login_Tela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnenter);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.lblEmail);
-            this.Name = "Login";
+            this.Name = "Login_Tela";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -90,5 +102,6 @@
         private System.Windows.Forms.Label lblsenha;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnenter;
     }
 }

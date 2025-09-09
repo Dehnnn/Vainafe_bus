@@ -52,11 +52,11 @@
     <Compile Include="cadastro.Designer.cs">
       <DependentUpon>cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmtelainicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmtelainicial.Designer.cs">
+      <DependentUpon>frmtelainicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="cadastro.resx">
       <DependentUpon>cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmtelainicial.resx">
+      <DependentUpon>frmtelainicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

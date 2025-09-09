@@ -27,7 +27,7 @@ namespace Vainafe_bus
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            Login product = new Login();
+            Login_Tela product = new Login_Tela();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;

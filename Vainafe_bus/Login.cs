@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Vainafe_bus
 {
-    public partial class Login : Form
+    public partial class Login_Tela : Form
     {
-        public Login()
+        public Login_Tela()
         {
             InitializeComponent();
+        }
+
+        private void btnenter_Click(object sender, EventArgs e)
+        {
+            Tela_Inicial central = new Tela_Inicial();
+            this.Hide();
+            central.ShowDialog();
+            this.Show();
         }
     }
 }
