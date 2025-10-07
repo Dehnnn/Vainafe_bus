@@ -76,6 +76,7 @@
             this.txbCpf.Size = new System.Drawing.Size(203, 20);
             this.txbCpf.TabIndex = 3;
             this.txbCpf.Text = "***.***.***-**";
+            this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // LblTel
             // 
@@ -110,6 +111,7 @@
             this.txbDataN.Size = new System.Drawing.Size(204, 20);
             this.txbDataN.TabIndex = 8;
             this.txbDataN.Text = "DD/MM/AAA";
+            this.txbDataN.TextChanged += new System.EventHandler(this.txbDataN_TextChanged);
             // 
             // txbEmail
             // 
