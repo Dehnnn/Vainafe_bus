@@ -139,8 +139,8 @@ namespace Vainafe_bus
 
             // OPÇÃO 1: LocalDB (Visual Studio) - TENTE ESTA PRIMEIRO
             string conexao = "Server=sqlexpress;;Database=cj3027759dpr2;User Id=aluno;Password=aluno";
-            string sql = "INSERT INTO usuarios (Nome, Cpf, Telefone, Nascimento, Email, Senha) " +
-                        "VALUES (@Nome, @Cpf, @Telefone, @Nascimento, @Email, @Senha)";
+            string sql = "INSERT INTO USUARIOS (NOME, CPF, TELEFONE, NASCIMENTO, EMAIL, SENHA, TIPO_USUARIO) " +
+            "VALUES (@Nome, @Cpf, @Telefone, @Nascimento, @Email, @Senha, @Tipo)";
 
             using (SqlConnection conn = new SqlConnection(conexao))
             using (SqlCommand cmd = new SqlCommand(sql, conn))
@@ -151,7 +151,7 @@ namespace Vainafe_bus
                 cmd.Parameters.AddWithValue("@Nascimento", dataNascimento);
                 cmd.Parameters.AddWithValue("@Email", Email);
                 cmd.Parameters.AddWithValue("@Senha", Senha);
-
+                cmd.Parameters.AddWithValue("@Tipo", "cliente");
                 try
                 {
                     conn.Open();

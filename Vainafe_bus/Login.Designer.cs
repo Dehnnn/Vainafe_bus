@@ -30,8 +30,8 @@
         {
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblsenha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textemail = new System.Windows.Forms.TextBox();
+            this.textsenha = new System.Windows.Forms.TextBox();
             this.btnenter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,21 +53,23 @@
             this.lblsenha.TabIndex = 1;
             this.lblsenha.Text = "Senha";
             // 
-            // textBox1
+            // textemail
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "seunome@email.com.br";
+            this.textemail.Location = new System.Drawing.Point(323, 121);
+            this.textemail.Name = "textemail";
+            this.textemail.Size = new System.Drawing.Size(212, 20);
+            this.textemail.TabIndex = 2;
+            this.textemail.Text = "seunome@email.com.br";
+            this.textemail.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textsenha
             // 
-            this.textBox2.Location = new System.Drawing.Point(324, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "******";
+            this.textsenha.Location = new System.Drawing.Point(324, 196);
+            this.textsenha.Name = "textsenha";
+            this.textsenha.Size = new System.Drawing.Size(211, 20);
+            this.textsenha.TabIndex = 3;
+            this.textsenha.Text = "******";
+            this.textsenha.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // btnenter
             // 
@@ -85,8 +87,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnenter);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textsenha);
+            this.Controls.Add(this.textemail);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.lblEmail);
             this.Name = "Login_Tela";
@@ -100,8 +102,8 @@
 
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblsenha;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textemail;
+        private System.Windows.Forms.TextBox textsenha;
         private System.Windows.Forms.Button btnenter;
     }
 }
