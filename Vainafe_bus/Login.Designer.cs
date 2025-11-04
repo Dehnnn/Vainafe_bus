@@ -93,6 +93,7 @@
             this.Controls.Add(this.lblEmail);
             this.Name = "Login_Tela";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Tela_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

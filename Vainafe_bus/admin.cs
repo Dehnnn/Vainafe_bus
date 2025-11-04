@@ -12,24 +12,30 @@ namespace Vainafe_bus
 {
     public partial class Paineladmin : Form
     {
-        public Paineladmin()
+        private int idUsuario;
+        private string nomeUsuario;
+
+        // 🔹 Este é o construtor
+        public Paineladmin(int idUsuario, string nomeUsuario)
         {
-            InitializeComponent();
+            InitializeComponent(); // monta os componentes visuais
+
+            // Guarda os valores para uso dentro da tela
+            this.idUsuario = idUsuario;
+            this.nomeUsuario = nomeUsuario;
+
+
         }
 
-        private void admin_Load(object sender, EventArgs e)
+        private void Paineladmin_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void btnviagens_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+    

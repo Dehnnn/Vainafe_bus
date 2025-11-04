@@ -64,6 +64,12 @@
     <Compile Include="frmtelainicial.Designer.cs">
       <DependentUpon>frmtelainicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gerenciamento_viagens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gerenciamento_viagens.Designer.cs">
+      <DependentUpon>Gerenciamento_viagens.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmtelainicial.resx">
       <DependentUpon>frmtelainicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gerenciamento_viagens.resx">
+      <DependentUpon>Gerenciamento_viagens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

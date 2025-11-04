@@ -10,6 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
+
 namespace Vainafe_bus
 {
     public partial class Login_Tela : Form
@@ -21,8 +27,6 @@ namespace Vainafe_bus
 
         private void btnenter_Click(object sender, EventArgs e)
         {
-            // SUBSTITUA O CÓDIGO ANTIGO POR ESTE:
-
             // Validação de campos vazios
             if (string.IsNullOrWhiteSpace(textemail.Text))
             {
@@ -40,7 +44,6 @@ namespace Vainafe_bus
                 return;
             }
 
-            // Criptografa a senha digitada para comparar com o banco
             string senhaCriptografada = CriptografarSenha(textsenha.Text);
             string email = textemail.Text.Trim();
 
@@ -75,22 +78,10 @@ namespace Vainafe_bus
                             MessageBox.Show($"Bem-vindo, Administrador {nomeUsuario}!",
                                 "Login Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // ⚠️ CRIE ESTE FORMULÁRIO ou use sua tela de admin
+                            // ✅ CORRIGIDO - Abre o painel admin
                             Paineladmin painelAdmin = new Paineladmin(idUsuario, nomeUsuario);
                             this.Hide();
                             painelAdmin.ShowDialog();
-                            this.Show();
-                        }
-                        else if (tipoUsuario.ToLower() == "funcionario")
-                        {
-                            // É FUNCIONÁRIO - abre tela de vendas
-                            MessageBox.Show($"Bem-vindo, {nomeUsuario}!",
-                                "Login Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Se você tiver uma tela específica para funcionário, use aqui
-                            Tela_Inicial telaFunc = new Tela_Inicial();
-                            this.Hide();
-                            telaFunc.ShowDialog();
                             this.Show();
                         }
                         else
@@ -130,7 +121,6 @@ namespace Vainafe_bus
             }
         }
 
-        // MÉTODO PARA CRIPTOGRAFAR A SENHA (igual ao do cadastro)
         private string CriptografarSenha(string senha)
         {
             using (SHA256 sha256 = SHA256.Create())
@@ -148,7 +138,6 @@ namespace Vainafe_bus
             }
         }
 
-        // MÉTODO PARA LIMPAR OS CAMPOS
         private void LimparCampos()
         {
             textemail.Clear();
@@ -161,6 +150,11 @@ namespace Vainafe_bus
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Tela_Load(object sender, EventArgs e)
         {
 
         }
