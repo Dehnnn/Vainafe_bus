@@ -19,7 +19,7 @@ namespace Vainafe_bus
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cadastro product = new cadastro();
+            Tela_Cadastro product = new Tela_Cadastro();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
@@ -39,6 +39,11 @@ namespace Vainafe_bus
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tela_Inicial_Load(object sender, EventArgs e)
         {
 
         }

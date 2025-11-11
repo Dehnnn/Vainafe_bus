@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Vainafe_bus
 {
-    public partial class cadastro : Form
+    public partial class Tela_Cadastro : Form
     {
-        public cadastro()
+        public Tela_Cadastro()
         {
             InitializeComponent();
         }
