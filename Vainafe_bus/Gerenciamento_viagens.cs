@@ -27,17 +27,17 @@ namespace Vainafe_bus
 
         private void ConfigurarDataGridView()
         {
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.MultiSelect = false;
-            dataGridView1.ReadOnly = true;
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.RowHeadersVisible = false;
+            dataGridViewViagens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewViagens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewViagens.MultiSelect = false;
+            dataGridViewViagens.ReadOnly = true;
+            dataGridViewViagens.AllowUserToAddRows = false;
+            dataGridViewViagens.BackgroundColor = Color.White;
+            dataGridViewViagens.RowHeadersVisible = false;
 
-            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(102, 126, 234);
-            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250);
+            dataGridViewViagens.DefaultCellStyle.SelectionBackColor = Color.FromArgb(102, 126, 234);
+            dataGridViewViagens.DefaultCellStyle.SelectionForeColor = Color.White;
+            dataGridViewViagens.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 247, 250);
         }
 
         private void CarregarViagens()
@@ -62,11 +62,11 @@ namespace Vainafe_bus
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    dataGridView1.DataSource = dt;
+                    dataGridViewViagens.DataSource = dt;
 
-                    if (dataGridView1.Columns.Contains("Preço"))
+                    if (dataGridViewViagens.Columns.Contains("Preço"))
                     {
-                        dataGridView1.Columns["Preço"].DefaultCellStyle.Format = "C2";
+                        dataGridViewViagens.Columns["Preço"].DefaultCellStyle.Format = "C2";
                     }
 
                     this.Text = $"Gerenciar Viagens - {dt.Rows.Count} viagens cadastradas";
@@ -81,10 +81,10 @@ namespace Vainafe_bus
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridViewViagens.SelectedRows.Count > 0)
             {
-                string origem = dataGridView1.SelectedRows[0].Cells["Origem"].Value.ToString();
-                string destino = dataGridView1.SelectedRows[0].Cells["Destino"].Value.ToString();
+                string origem = dataGridViewViagens.SelectedRows[0].Cells["Origem"].Value.ToString();
+                string destino = dataGridViewViagens.SelectedRows[0].Cells["Destino"].Value.ToString();
 
                 DialogResult result = MessageBox.Show(
                     $"Deseja realmente excluir a viagem:\n\n{origem} → {destino}?",
@@ -94,7 +94,7 @@ namespace Vainafe_bus
 
                 if (result == DialogResult.Yes)
                 {
-                    int idViagem = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["ID"].Value);
+                    int idViagem = Convert.ToInt32(dataGridViewViagens.SelectedRows[0].Cells["ID"].Value);
                     ExcluirViagem(idViagem);
                 }
             }
@@ -155,6 +155,11 @@ namespace Vainafe_bus
         }
 
         private void GerenciarViagens_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewViagens_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

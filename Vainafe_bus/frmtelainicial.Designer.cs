@@ -318,12 +318,12 @@ namespace Vainafe_bus
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboxorigem = new System.Windows.Forms.ComboBox();
+            this.comboxdestino = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboxida = new System.Windows.Forms.ComboBox();
+            this.comboxvolta = new System.Windows.Forms.ComboBox();
+            this.comboxbusca = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -386,7 +386,7 @@ namespace Vainafe_bus
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Destino";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           
             // 
             // label3
             // 
@@ -407,14 +407,14 @@ namespace Vainafe_bus
             this.label4.TabIndex = 5;
             this.label4.Text = "Volta (opcional)";
             // 
-            // comboBox1
+            // comboxorigem
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboxorigem.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboxorigem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxorigem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboxorigem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comboxorigem.FormattingEnabled = true;
+            this.comboxorigem.Items.AddRange(new object[] {
             "Aparecida",
             "Campinas",
             "Campos do Jordão",
@@ -437,20 +437,20 @@ namespace Vainafe_bus
             "Santos",
             "São Sebastião",
             "Ubatuba"});
-            this.comboBox1.Location = new System.Drawing.Point(94, 107);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 23);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboxorigem.Location = new System.Drawing.Point(94, 107);
+            this.comboxorigem.Name = "comboxorigem";
+            this.comboxorigem.Size = new System.Drawing.Size(199, 23);
+            this.comboxorigem.TabIndex = 6;
+           
             // 
-            // comboBox2
+            // comboxdestino
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboxdestino.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboxdestino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxdestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboxdestino.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comboxdestino.FormattingEnabled = true;
+            this.comboxdestino.Items.AddRange(new object[] {
             "Aparecida",
             "Campinas",
             "Campos do Jordão",
@@ -473,10 +473,11 @@ namespace Vainafe_bus
             "Santos",
             "São Sebastião",
             "Ubatuba"});
-            this.comboBox2.Location = new System.Drawing.Point(94, 170);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 23);
-            this.comboBox2.TabIndex = 7;
+            this.comboxdestino.Location = new System.Drawing.Point(94, 170);
+            this.comboxdestino.Name = "comboxdestino";
+            this.comboxdestino.Size = new System.Drawing.Size(199, 23);
+            this.comboxdestino.TabIndex = 7;
+           
             // 
             // label1
             // 
@@ -489,43 +490,46 @@ namespace Vainafe_bus
             this.label1.TabIndex = 8;
             this.label1.Text = "Ida";
             // 
-            // comboBox3
+            // comboxida
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(76, 242);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 9;
+            this.comboxida.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboxida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboxida.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comboxida.FormattingEnabled = true;
+            this.comboxida.Location = new System.Drawing.Point(76, 242);
+            this.comboxida.Name = "comboxida";
+            this.comboxida.Size = new System.Drawing.Size(121, 23);
+            this.comboxida.TabIndex = 9;
+           
             // 
-            // comboBox4
+            // comboxvolta
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(214, 242);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 10;
+            this.comboxvolta.BackColor = System.Drawing.Color.Gainsboro;
+            this.comboxvolta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxvolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboxvolta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.comboxvolta.FormattingEnabled = true;
+            this.comboxvolta.Location = new System.Drawing.Point(214, 242);
+            this.comboxvolta.Name = "comboxvolta";
+            this.comboxvolta.Size = new System.Drawing.Size(121, 23);
+            this.comboxvolta.TabIndex = 10;
+            
             // 
-            // button1
+            // comboxbusca
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(136, 288);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 35);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Buscar Passagem";
-            this.button1.UseVisualStyleBackColor = false;
+            this.comboxbusca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.comboxbusca.FlatAppearance.BorderSize = 0;
+            this.comboxbusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboxbusca.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.comboxbusca.ForeColor = System.Drawing.Color.White;
+            this.comboxbusca.Location = new System.Drawing.Point(136, 288);
+            this.comboxbusca.Name = "comboxbusca";
+            this.comboxbusca.Size = new System.Drawing.Size(137, 35);
+            this.comboxbusca.TabIndex = 11;
+            this.comboxbusca.Text = "Buscar Passagem";
+            this.comboxbusca.UseVisualStyleBackColor = false;
+            this.comboxbusca.Click += new System.EventHandler(this.comboxbusca_Click);
             // 
             // panel1
             // 
@@ -561,16 +565,16 @@ namespace Vainafe_bus
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.comboxorigem);
             this.panel2.Controls.Add(this.Lblorigem);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.comboxbusca);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.comboBox4);
+            this.panel2.Controls.Add(this.comboxvolta);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.comboxida);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.comboxdestino);
             this.panel2.Location = new System.Drawing.Point(50, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(350, 350);
@@ -599,7 +603,7 @@ namespace Vainafe_bus
             this.Controls.Add(this.panel3);
             this.Name = "Tela_Inicial";
             this.Text = "Home - Vainafe Bus";
-            this.Load += new System.EventHandler(this.Tela_Inicial_Load);
+            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -617,12 +621,12 @@ namespace Vainafe_bus
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboxorigem;
+        private System.Windows.Forms.ComboBox comboxdestino;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboxida;
+        private System.Windows.Forms.ComboBox comboxvolta;
+        private System.Windows.Forms.Button comboxbusca;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
