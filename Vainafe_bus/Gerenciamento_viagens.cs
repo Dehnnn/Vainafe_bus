@@ -144,14 +144,53 @@ namespace Vainafe_bus
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcionalidade 'Nova Viagem' em desenvolvimento!",
-                "Em breve", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AbrirTelaNovaViagem();
+        }
+
+        private void btnNovaViagem_Click(object sender, EventArgs e)
+        {
+            AbrirTelaNovaViagem();
+        }
+
+        // MÉTODO PARA ABRIR A TELA DE NOVA VIAGEM
+        private void AbrirTelaNovaViagem()
+        {
+            try
+            {
+                Novaviagem telaNovaViagem = new Novaviagem();
+
+                // Abre a tela como diálogo e verifica se salvou algo
+                DialogResult resultado = telaNovaViagem.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    // Se salvou com sucesso, atualiza a lista
+                    CarregarViagens();
+                    MessageBox.Show("Nova viagem cadastrada com sucesso! 🎉",
+                        "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao abrir tela de nova viagem: {ex.Message}",
+                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Funcionalidade 'Editar' em desenvolvimento!",
-                "Em breve", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (dataGridViewViagens.SelectedRows.Count > 0)
+            {
+                MessageBox.Show("Funcionalidade 'Editar' em desenvolvimento!\n\n" +
+                              $"Viagem selecionada: {dataGridViewViagens.SelectedRows[0].Cells["Origem"].Value} → " +
+                              $"{dataGridViewViagens.SelectedRows[0].Cells["Destino"].Value}",
+                    "Em breve", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma viagem para editar.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void GerenciarViagens_Load(object sender, EventArgs e)
@@ -162,6 +201,21 @@ namespace Vainafe_bus
         private void dataGridViewViagens_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        // Método para duplo clique na grid (futura edição rápida)
+        private void dataGridViewViagens_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Futuramente abrir edição aqui também
+                string origem = dataGridViewViagens.Rows[e.RowIndex].Cells["Origem"].Value.ToString();
+                string destino = dataGridViewViagens.Rows[e.RowIndex].Cells["Destino"].Value.ToString();
+
+                MessageBox.Show($"Duplo clique na viagem: {origem} → {destino}\n\n" +
+                              "Funcionalidade de edição em desenvolvimento!",
+                    "Editar Viagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
