@@ -217,5 +217,10 @@ namespace Vainafe_bus
                     "Editar Viagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void panelActions_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

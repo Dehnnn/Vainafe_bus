@@ -169,7 +169,6 @@ namespace Vainafe_bus
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Paineladmin));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.bntrelatorios = new System.Windows.Forms.Button();
@@ -236,7 +235,6 @@ namespace Vainafe_bus
             this.btnSair.Text = "🚪 Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSair.UseVisualStyleBackColor = false;
-            
             // 
             // bntrelatorios
             // 
@@ -253,7 +251,6 @@ namespace Vainafe_bus
             this.bntrelatorios.Text = "📊 Relatórios";
             this.bntrelatorios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bntrelatorios.UseVisualStyleBackColor = false;
-           
             // 
             // btnusuarios
             // 
@@ -270,7 +267,7 @@ namespace Vainafe_bus
             this.btnusuarios.Text = "👥 Gerenciar Usuários";
             this.btnusuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnusuarios.UseVisualStyleBackColor = false;
-           
+            this.btnusuarios.Click += new System.EventHandler(this.btnusuarios_Click_1);
             // 
             // btnpassagens
             // 
@@ -287,7 +284,7 @@ namespace Vainafe_bus
             this.btnpassagens.Text = "🎫 Gerenciar Passagens";
             this.btnpassagens.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnpassagens.UseVisualStyleBackColor = false;
-           
+            this.btnpassagens.Click += new System.EventHandler(this.btnpassagens_Click_1);
             // 
             // btnviagens
             // 
@@ -346,7 +343,7 @@ namespace Vainafe_bus
             this.labelWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelWelcome.Location = new System.Drawing.Point(40, 55);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(125, 20);
+            this.labelWelcome.Size = new System.Drawing.Size(122, 20);
             this.labelWelcome.TabIndex = 1;
             this.labelWelcome.Text = "Seja bem-vindo!";
             // 
@@ -357,7 +354,7 @@ namespace Vainafe_bus
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.labelTitle.Location = new System.Drawing.Point(35, 20);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(273, 29);
+            this.labelTitle.Size = new System.Drawing.Size(293, 29);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "Painel do Administrador";
             // 
@@ -370,6 +367,7 @@ namespace Vainafe_bus
             this.panelContent.Name = "panelContent";
             this.panelContent.Size = new System.Drawing.Size(750, 500);
             this.panelContent.TabIndex = 3;
+            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
             // panelStats
             // 
@@ -391,7 +389,7 @@ namespace Vainafe_bus
             this.labelStatsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelStatsTitle.Location = new System.Drawing.Point(20, 20);
             this.labelStatsTitle.Name = "labelStatsTitle";
-            this.labelStatsTitle.Size = new System.Drawing.Size(223, 26);
+            this.labelStatsTitle.Size = new System.Drawing.Size(264, 26);
             this.labelStatsTitle.TabIndex = 4;
             this.labelStatsTitle.Text = "Visão Geral do Sistema";
             // 
@@ -413,7 +411,7 @@ namespace Vainafe_bus
             this.labelStat4Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.labelStat4Value.Location = new System.Drawing.Point(20, 20);
             this.labelStat4Value.Name = "labelStat4Value";
-            this.labelStat4Value.Size = new System.Drawing.Size(72, 37);
+            this.labelStat4Value.Size = new System.Drawing.Size(80, 37);
             this.labelStat4Value.TabIndex = 1;
             this.labelStat4Value.Text = "1.2k";
             // 
@@ -424,7 +422,7 @@ namespace Vainafe_bus
             this.labelStat4Title.ForeColor = System.Drawing.Color.Gray;
             this.labelStat4Title.Location = new System.Drawing.Point(22, 65);
             this.labelStat4Title.Name = "labelStat4Title";
-            this.labelStat4Title.Size = new System.Drawing.Size(74, 17);
+            this.labelStat4Title.Size = new System.Drawing.Size(69, 17);
             this.labelStat4Title.TabIndex = 0;
             this.labelStat4Title.Text = "Visitantes";
             // 
@@ -446,7 +444,7 @@ namespace Vainafe_bus
             this.labelStat3Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.labelStat3Value.Location = new System.Drawing.Point(20, 20);
             this.labelStat3Value.Name = "labelStat3Value";
-            this.labelStat3Value.Size = new System.Drawing.Size(55, 37);
+            this.labelStat3Value.Size = new System.Drawing.Size(72, 37);
             this.labelStat3Value.TabIndex = 1;
             this.labelStat3Value.Text = "156";
             // 
@@ -457,7 +455,7 @@ namespace Vainafe_bus
             this.labelStat3Title.ForeColor = System.Drawing.Color.Gray;
             this.labelStat3Title.Location = new System.Drawing.Point(22, 65);
             this.labelStat3Title.Name = "labelStat3Title";
-            this.labelStat3Title.Size = new System.Drawing.Size(73, 17);
+            this.labelStat3Title.Size = new System.Drawing.Size(78, 17);
             this.labelStat3Title.TabIndex = 0;
             this.labelStat3Title.Text = "Passagens";
             // 
@@ -479,7 +477,7 @@ namespace Vainafe_bus
             this.labelStat2Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.labelStat2Value.Location = new System.Drawing.Point(20, 20);
             this.labelStat2Value.Name = "labelStat2Value";
-            this.labelStat2Value.Size = new System.Drawing.Size(55, 37);
+            this.labelStat2Value.Size = new System.Drawing.Size(74, 37);
             this.labelStat2Value.TabIndex = 1;
             this.labelStat2Value.Text = "892";
             // 
@@ -490,7 +488,7 @@ namespace Vainafe_bus
             this.labelStat2Title.ForeColor = System.Drawing.Color.Gray;
             this.labelStat2Title.Location = new System.Drawing.Point(22, 65);
             this.labelStat2Title.Name = "labelStat2Title";
-            this.labelStat2Title.Size = new System.Drawing.Size(61, 17);
+            this.labelStat2Title.Size = new System.Drawing.Size(64, 17);
             this.labelStat2Title.TabIndex = 0;
             this.labelStat2Title.Text = "Usuários";
             // 
@@ -512,7 +510,7 @@ namespace Vainafe_bus
             this.labelStat1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.labelStat1Value.Location = new System.Drawing.Point(20, 20);
             this.labelStat1Value.Name = "labelStat1Value";
-            this.labelStat1Value.Size = new System.Drawing.Size(36, 37);
+            this.labelStat1Value.Size = new System.Drawing.Size(55, 37);
             this.labelStat1Value.TabIndex = 1;
             this.labelStat1Value.Text = "24";
             // 
@@ -523,7 +521,7 @@ namespace Vainafe_bus
             this.labelStat1Title.ForeColor = System.Drawing.Color.Gray;
             this.labelStat1Title.Location = new System.Drawing.Point(22, 65);
             this.labelStat1Title.Name = "labelStat1Title";
-            this.labelStat1Title.Size = new System.Drawing.Size(58, 17);
+            this.labelStat1Title.Size = new System.Drawing.Size(59, 17);
             this.labelStat1Title.TabIndex = 0;
             this.labelStat1Title.Text = "Viagens";
             // 

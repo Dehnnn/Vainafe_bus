@@ -224,6 +224,7 @@ namespace Vainafe_bus
             this.panelActions.Name = "panelActions";
             this.panelActions.Size = new System.Drawing.Size(1000, 60);
             this.panelActions.TabIndex = 1;
+            this.panelActions.Paint += new System.Windows.Forms.PaintEventHandler(this.panelActions_Paint);
             // 
             // btnAtualizar
             // 
