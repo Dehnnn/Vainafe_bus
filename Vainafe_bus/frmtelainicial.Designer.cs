@@ -386,7 +386,6 @@ namespace Vainafe_bus
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Destino";
-           
             // 
             // label3
             // 
@@ -441,7 +440,6 @@ namespace Vainafe_bus
             this.comboxorigem.Name = "comboxorigem";
             this.comboxorigem.Size = new System.Drawing.Size(199, 23);
             this.comboxorigem.TabIndex = 6;
-           
             // 
             // comboxdestino
             // 
@@ -477,7 +475,6 @@ namespace Vainafe_bus
             this.comboxdestino.Name = "comboxdestino";
             this.comboxdestino.Size = new System.Drawing.Size(199, 23);
             this.comboxdestino.TabIndex = 7;
-           
             // 
             // label1
             // 
@@ -501,7 +498,6 @@ namespace Vainafe_bus
             this.comboxida.Name = "comboxida";
             this.comboxida.Size = new System.Drawing.Size(121, 23);
             this.comboxida.TabIndex = 9;
-           
             // 
             // comboxvolta
             // 
@@ -514,7 +510,6 @@ namespace Vainafe_bus
             this.comboxvolta.Name = "comboxvolta";
             this.comboxvolta.Size = new System.Drawing.Size(121, 23);
             this.comboxvolta.TabIndex = 10;
-            
             // 
             // comboxbusca
             // 
@@ -602,8 +597,8 @@ namespace Vainafe_bus
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Name = "Tela_Inicial";
-            this.Text = "Home - Vainafe Bus";
-            
+            this.Text = "TelaInicial";
+            this.Load += new System.EventHandler(this.Tela_Inicial_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

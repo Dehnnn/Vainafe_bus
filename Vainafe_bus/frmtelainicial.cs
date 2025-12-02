@@ -544,6 +544,11 @@ namespace Vainafe_bus
             this.Visible = true;
         }
 
+        private void Tela_Inicial_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // ... (outros métodos)
     }
 }

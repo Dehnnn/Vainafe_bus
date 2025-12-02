@@ -85,11 +85,10 @@ namespace Vainafe_bus
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-           
             this.labelTitle.ForeColor = System.Drawing.Color.White;
             this.labelTitle.Location = new System.Drawing.Point(20, 18);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(237, 26);
+            this.labelTitle.Size = new System.Drawing.Size(137, 13);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "🎫 Passagens Encontradas";
             // 
@@ -102,6 +101,7 @@ namespace Vainafe_bus
             this.panelResultados.Name = "panelResultados";
             this.panelResultados.Size = new System.Drawing.Size(634, 401);
             this.panelResultados.TabIndex = 1;
+            this.panelResultados.Paint += new System.Windows.Forms.PaintEventHandler(this.panelResultados_Paint);
             // 
             // btnVoltar
             // 
@@ -109,7 +109,6 @@ namespace Vainafe_bus
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-           
             this.btnVoltar.ForeColor = System.Drawing.Color.White;
             this.btnVoltar.Location = new System.Drawing.Point(520, 15);
             this.btnVoltar.Name = "btnVoltar";

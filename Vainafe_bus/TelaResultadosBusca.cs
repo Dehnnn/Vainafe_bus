@@ -131,5 +131,10 @@ namespace Vainafe_bus
         {
             this.Close();
         }
+
+        private void panelResultados_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
